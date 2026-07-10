@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>J&amp;S Creative &amp; Marketing — Acesso ao ERP</title>
+<meta name="description" content="Plataforma corporativa J&S Creative & Marketing" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+<div class="jc-app-bg"></div>
+
+<main class="login-shell">
+
+  <!-- Painel de marca -->
+  <section class="login-brand" aria-hidden="false">
+    <span class="ignition-line"></span>
+
+    <div class="login-monogram">
+      <div class="mark">J&amp;S</div>
+      <div class="wordmark">
+        Creative &amp; Marketing
+        <span>Plataforma Corporativa</span>
+      </div>
+    </div>
+
+    <div class="login-hero">
+      <span class="jc-eyebrow">ERP Premium</span>
+      <h1>Tecnologia que <em>projeta</em>.<br/>Marca que <em>comunica</em>.</h1>
+      <p>
+        Gestão completa de comercial, produção, financeiro e clientes em uma
+        única plataforma — construída com o mesmo rigor que aplicamos em
+        cada projeto de comunicação visual que entregamos.
+      </p>
+    </div>
+
+    <div class="login-footer-note">
+      <span class="jc-divider-gold" style="width:32px; display:inline-block;"></span>
+      <span>Acesso restrito · Todos os acessos são registrados</span>
+    </div>
+  </section>
+
+  <!-- Painel do formulário -->
+  <section class="login-form-panel">
+    <form class="jc-glass login-card" id="loginForm" novalidate>
+      <div>
+        <h2>Entrar na plataforma</h2>
+        <p class="subtitle">Use as credenciais fornecidas pela administração.</p>
+      </div>
+
+      <div id="formStatus" class="form-status" role="alert"></div>
+
+      <div class="jc-field">
+        <label for="email">E-mail corporativo</label>
+        <div class="jc-input-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6.5l9 6 9-6"/><rect x="3" y="4.5" width="18" height="15" rx="2"/></svg>
+          <input type="email" id="email" name="email" autocomplete="username" placeholder="seunome@jscreative.com.br" required />
+        </div>
+      </div>
+
+      <div class="jc-field">
+        <label for="password">Senha</label>
+        <div class="jc-input-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+          <input type="password" id="password" name="password" autocomplete="current-password" placeholder="••••••••••" required minlength="8" />
+          <button type="button" class="jc-input-toggle" id="togglePassword" aria-label="Mostrar senha">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="jc-field" id="twoFactorField" style="display:none;">
+        <label for="twoFactorCode">Código de verificação (2FA)</label>
+        <div class="jc-input-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 8h6M9 12h6"/></svg>
+          <input type="text" id="twoFactorCode" name="twoFactorCode" inputmode="numeric" maxlength="6" placeholder="000000" />
+        </div>
+      </div>
+
+      <div class="login-options-row">
+        <label class="jc-remember">
+          <input type="checkbox" id="remember" checked />
+          Manter conectado
+        </label>
+        <a href="forgot-password.html" class="jc-link-gold">Esqueci minha senha</a>
+      </div>
+
+      <button type="submit" class="jc-btn jc-btn-primary" id="submitBtn" style="width:100%; padding:15px;">
+        Acessar plataforma
+      </button>
+
+      <div class="jc-divider-gold"></div>
+
+      <div class="login-role-hint" aria-label="Perfis de acesso suportados">
+        <span class="role-chip">Administrador</span>
+        <span class="role-chip">Gerente</span>
+        <span class="role-chip">Financeiro</span>
+        <span class="role-chip">Comercial</span>
+        <span class="role-chip">Produção</span>
+        <span class="role-chip">Designer</span>
+        <span class="role-chip">Instalador</span>
+        <span class="role-chip">Cliente</span>
+      </div>
+    </form>
+  </section>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

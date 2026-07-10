@@ -1,0 +1,79 @@
+/* =====================================================================
+   J&S CREATIVE & MARKETING — DESIGN TOKENS
+   Direção: instrumentação automotiva de luxo (Mercedes/Porsche/Rolls
+   Royce) fundida com minimalismo de software (Apple/Tesla).
+   Assinatura visual: "ignição digital" — varredura dourada no boot
+   da interface + cards de KPI em estilo painel de instrumentos.
+   ===================================================================== */
+
+:root {
+  /* --- Cor --- */
+  --c-bg:            #0A0A0B;   /* preto absoluto */
+  --c-surface-1:     #121214;   /* painel base */
+  --c-surface-2:     #19191C;   /* painel elevado */
+  --c-glass-fill:     rgba(255, 255, 255, 0.035);
+  --c-glass-fill-hi:  rgba(255, 255, 255, 0.065);
+  --c-glass-border:   rgba(201, 169, 97, 0.18);
+  --c-glass-border-hi:rgba(201, 169, 97, 0.38);
+
+  --c-gold:          #C9A961;   /* dourado metálico — primário */
+  --c-gold-bright:   #F0D48A;   /* glow / hover */
+  --c-gold-deep:     #7A6128;   /* sombra dourada */
+  --c-gold-dim:      rgba(201, 169, 97, 0.12);
+
+  --c-text-primary:  #F3F1EA;   /* branco quente */
+  --c-text-secondary:#C7C3B8;
+  --c-text-muted:    #85816F;
+
+  --c-danger:        #D9685F;
+  --c-success:       #6FBF8B;
+  --c-warning:       #E0B25A;
+
+  /* --- Tipografia --- */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', monospace;
+
+  --fs-hero:   clamp(2.6rem, 4vw, 4.2rem);
+  --fs-h1:     2rem;
+  --fs-h2:     1.5rem;
+  --fs-h3:     1.125rem;
+  --fs-body:   0.95rem;
+  --fs-small:  0.8125rem;
+  --fs-micro:  0.6875rem;
+
+  /* --- Espaçamento --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* --- Forma --- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* --- Elevação --- */
+  --shadow-glass: 0 20px 60px -20px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255,255,255,0.04);
+  --shadow-gold-glow: 0 0 0 1px var(--c-glass-border), 0 0 40px -8px rgba(201,169,97,0.35);
+
+  /* --- Movimento --- */
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 900ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

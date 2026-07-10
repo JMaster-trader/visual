@@ -1,0 +1,140 @@
+/* =====================================================================
+   J&S CREATIVE & MARKETING — TEMA BASE
+   ===================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 600; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+::selection { background: var(--c-gold-dim); color: var(--c-gold-bright); }
+
+/* Fundo base com textura sutil de carbono + glow radial dourado ambiente */
+.jc-app-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 0%, rgba(201,169,97,0.10), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(201,169,97,0.06), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px),
+    var(--c-bg);
+}
+
+/* --- Painel de vidro --- */
+.jc-glass {
+  background: var(--c-glass-fill);
+  border: 1px solid var(--c-glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: var(--shadow-glass);
+}
+
+/* --- Botões --- */
+.jc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: transform var(--dur-fast) var(--ease-luxury), box-shadow var(--dur-fast) var(--ease-luxury), background var(--dur-fast);
+}
+.jc-btn:active { transform: scale(0.97); }
+.jc-btn-primary {
+  background: linear-gradient(135deg, var(--c-gold-bright), var(--c-gold) 55%, var(--c-gold-deep));
+  color: #14110A;
+  box-shadow: 0 8px 24px -8px rgba(201,169,97,0.55);
+}
+.jc-btn-primary:hover { box-shadow: 0 10px 32px -6px rgba(201,169,97,0.75); }
+.jc-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.jc-btn-ghost {
+  background: transparent;
+  border-color: var(--c-glass-border);
+  color: var(--c-text-secondary);
+}
+.jc-btn-ghost:hover { border-color: var(--c-glass-border-hi); color: var(--c-text-primary); }
+
+/* --- Inputs --- */
+.jc-field { display: flex; flex-direction: column; gap: var(--sp-2); }
+.jc-field label {
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-text-muted);
+}
+.jc-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--c-glass-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.02);
+  transition: border-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+.jc-input-wrap:focus-within {
+  border-color: var(--c-gold);
+  box-shadow: 0 0 0 3px var(--c-gold-dim);
+}
+.jc-input-wrap input, .jc-input-wrap select {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--c-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  padding: 13px 16px;
+}
+.jc-input-wrap svg { margin-left: 14px; color: var(--c-text-muted); flex-shrink: 0; }
+.jc-input-toggle {
+  background: none; border: none; color: var(--c-text-muted);
+  padding: 0 14px; display: flex; align-items: center;
+}
+.jc-input-toggle:hover { color: var(--c-gold); }
+.jc-error-text { color: var(--c-danger); font-size: var(--fs-small); min-height: 18px; }
+
+/* --- Utilidades --- */
+.jc-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.jc-eyebrow {
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--c-gold);
+}
+.jc-divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+  opacity: 0.5;
+}
+
+/* Foco visível para acessibilidade de teclado */
+:focus-visible {
+  outline: 2px solid var(--c-gold-bright);
+  outline-offset: 2px;
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(201,169,97,0.25); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
